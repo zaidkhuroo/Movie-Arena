@@ -1,11 +1,16 @@
-import React, { useContext } from "react";
-import { AppContext } from "./context";
+import Movie from "./Movie";
+import Search from "./Search";
 
 const Home = () => {
-  const name = useContext(AppContext) //context hook to get the data from warehouse(AppProvider)
-  return <>
-    <div>Home is here.</div>
-    <h2>{name}</h2>
-  </>
+  return (
+    <>
+      <div className="container">
+       
+        <Search />
+        <Movie />
+      </div>
+    </>
+  );
 };
+
 export default Home;
